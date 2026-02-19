@@ -86,7 +86,7 @@ form label{
 }
 
 form input{
-    width:100 %;
+    width:100%;
     padding:8 px;
     margin-top:5 px;
     border:none;
@@ -96,7 +96,7 @@ form input{
 form button{
     margin-top:15 px;
     padding:10 px;
-    width:100 %;
+    width:100%;
     background-color:#ffd700;
     border:none;
     font-weight:bold;
@@ -109,8 +109,7 @@ form button{
 </style>
 
 <script>
-functionshowMenu (menu)
-{
+function showMenu(menu){
     document.querySelectorAll('.section').forEach(sec=>{
         sec.classList.remove('active');
     });
