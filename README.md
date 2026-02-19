@@ -109,7 +109,7 @@ form button{
 </style>
 
 <script>
-function showMenu(menu){
+functionshowMenu(menu){
     document.querySelectorAll('.section').forEach(sec=>{
         sec.classList.remove('active');
     });
@@ -130,7 +130,7 @@ function showMenu(menu){
 </div>
 
 <div class="nav-right">
-<a href="#" onclick="showMenu('login')">Login</a>
+<a href="#" onclick="showMenu('Login')">Login</a>
 </div>
 </nav>
 
