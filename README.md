@@ -37,7 +37,7 @@ nav{
 }
 
 .nav-right a{
-    color:#ffd700;
+    color:#0026ff;
     text-decoration:none;
     font-weight:bold;
 }
@@ -70,7 +70,7 @@ footer{
 footer a{
     display:block;
     margin:10 px;
-    color:#ffd700;
+    color:#0026ff;
     text-decoration:none;
 }
 
@@ -97,7 +97,7 @@ form button{
     margin-top:15 px;
     padding:10 px;
     width:100%;
-    background-color:#ffd700;
+    background-color:#0026ff;
     border:none;
     font-weight:bold;
     cursor:pointer;
@@ -109,7 +109,7 @@ form button{
 </style>
 
 <script>
-functionshowMenu(menu){
+function showMenu(menu){
     document.querySelectorAll('.section').forEach(sec=>{
         sec.classList.remove('active');
     });
@@ -130,7 +130,7 @@ functionshowMenu(menu){
 </div>
 
 <div class="nav-right">
-<a href="#" onclick="showMenu('Login')">Login</a>
+<a href="#" onclick="showMenu('login')">Login</a>
 </div>
 </nav>
 
