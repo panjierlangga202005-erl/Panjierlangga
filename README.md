@@ -37,7 +37,7 @@ nav{
 }
 
 .nav-right a{
-    color:#0026ff;
+    color:#f2f7f7;
     text-decoration:none;
     font-weight:bold;
 }
@@ -70,7 +70,7 @@ footer{
 footer a{
     display:block;
     margin:10 px;
-    color:#0026ff;
+    color:#00a2ff;
     text-decoration:none;
 }
 
@@ -97,7 +97,7 @@ form button{
     margin-top:15 px;
     padding:10 px;
     width:100%;
-    background-color:#0026ff;
+    background-color:#00a2ff;
     border:none;
     font-weight:bold;
     cursor:pointer;
