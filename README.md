@@ -254,11 +254,13 @@ function showMenu(menu){
     <h2>Login Anggota</h2>
     <div class="login-form">
         <form>
-            <label>Email</label>
-            <input type="email" required>
+            <label>Username</label>
+            <input type="username" required>
             <label>Password</label>
             <input type="password" required>
-            <button type="submit">Masuk</button>
+            <label>Status Pengguna</label>
+            <input type="Status Pengguna" required>
+            <button type="Login">Masuk</button>
         </form>
     </div>
 </div>
