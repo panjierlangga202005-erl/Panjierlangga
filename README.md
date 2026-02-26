@@ -206,7 +206,7 @@ function showMenu(menu){
 
     <div class="link-box">
         <a href="https://www.facebook.com/panji.erlangga.77" target="_blank">
-        Look at Me
+        Media Sosial
         </a>
         <a href="https://drive.google.com/drive/folders/1KyE7ubNtW2E0yUoDRS_2pGuJB3SHfi4f" target="_blank">
         Profile
