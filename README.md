@@ -563,6 +563,268 @@
                 <strong>panjierlangga202005@gmail.com</strong>
             </div>
             <div class="contact-item">
+          px; margin: 0 auto; }
+        form { display: flex; flex-direction: column; width: 100%; }
+        form label { margin-bottom: 5px; font-size: 0.9rem; color: #cbd5e1; }
+        form input, form textarea, form select { padding: 12px; margin-bottom: 15px; border: none; border-radius: 5px; font-size: 1rem; outline: none; font-family: 'Poppins', sans-serif; background: rgba(255,255,255,0.1); color: white; }
+        form input::placeholder, form textarea::placeholder { color: #94a3b8; }
+        form button { padding: 12px; background: #ffd700; color: #0f172a; border: none; border-radius: 5px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+        form button:hover { background: #e6c200; }
+        
+        /* Contact Card - VERTICAL LAYOUT */
+        .contact-card { 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 25px; 
+            border-radius: 10px; 
+            margin-bottom: 30px; 
+            border-left: 4px solid #ffd700; 
+        }
+        .contact-info { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 30px; 
+            margin-bottom: 0; 
+        }
+        .contact-item { 
+            display: flex; 
+            align-items: center; 
+			flex-direction: column;
+            gap: 20px; 
+            padding: 30px; 
+            background: rgba(255,255,255,0.05); 
+            border-radius: 15px; 
+            text-align: center; 
+        }	
+        .contact-item strong { 
+            color: #ffd700; 
+            font-size: 1.1rem; 
+            min-width: 300px; 
+		}
+        
+        /* Footer */
+       .main-footer {
+            background: #0f172a;
+            color: #ffd700;
+            padding: 60px 0 30px;
+            font-family: 'Poppins', sans-serif;
+            border-top: 4px solid #38bdf8;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            color: #cbd5e1;
+        }
+
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: #ffd700;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .jam-operasional p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .social-box {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-box a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-box a:hover {
+            background: #ffd700;
+            color: #0f172a;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+
+<nav>
+    <div class="nav-left">
+        <a onclick="showMenu('dashboard', this)" class="active">Dashboard</a>
+        <a onclick="showMenu('katalog', this)">Katalog</a>
+        <a onclick="showMenu('kegiatan', this)">Kegiatan</a>
+        <a onclick="showMenu('contact', this)">Contact</a>
+    </div>
+    <div class="nav-right">
+        <a onclick="showMenu('login', this)">Login</a>
+        <a onclick="showMenu('daftar', this)">Daftar</a>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="section active">
+        <h1>Library Panji</h1>
+        <p class="tagline">Welcome to my profile</p>
+        
+        <div class="link-box">
+            <a href="https://www.facebook.com/panji.erlangga.77" target="_blank">
+                📘 Look at Me
+            </a>
+            <a href="https://drive.google.com/drive/folders/1KyE7ubNtW2E0yUoDRS_2pGuJB3SHfi4f" target="_blank">
+                📁 Profile
+            </a>
+        </div>
+
+        <div class="video-box">
+            <h3>Best Video</h3>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/NWQ13Y4G0fw"
+                title="YouTube Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- KATALOG -->
+    <div id="katalog" class="section">
+        <h2>Daftar Buku Perpustakaan</h2>
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Cari buku perpustakaan...">
+        </div>
+        <ul id="bookList">
+            <li>Pengantar Ilmu Perpustakaan</li>
+            <li>Dasar-dasar Perpustakaan</li>
+            <li>Manajemen Perpustakaan</li>
+            <li>Pengembangan Koleksi Perpustakaan</li>
+            <li>Layanan Perpustakaan</li>
+        </ul>
+    </div>
+
+    <!-- KEGIATAN LITERASI -->
+     <div id="kegiatan" class="section">
+    <h2>Kegiatan/Event</h2>
+    <p style="text-align: center; color: #cbd5e1; margin-bottom: 40px; font-size: 1.1rem;">
+        Ikuti berbagai kegiatan menarik seputar perpustakaan
+    </p>
+    
+    <div class="activities-list">
+        
+        
+        <div class="activity-item" onclick="openModal(https://i.pinimg.com/736x/58/cd/c0/58cdc0f47523bdbf78768f8fa019377a.jpg), 'Seminar perkembangan perpustakaan', 'Selasa, 26 Agustus 2025 | 08.30-Selesai', 'Foto seminar perkembangan perpustakaan bertema "perkembangan">
+            <img src="https://i.pinimg.com/736x/58/cd/c0/58cdc0f47523bdbf78768f8fa019377a.jpg" 
+                 alt="Seminar perkembangan perpustakaan" class="activity-image">
+            <div class="activity-content">
+                <div class="activity-icon">📚</div>
+                <div class="activity-title">Seminar perkembangan perpustakaan</div>
+                <div class="activity-date">
+                    <i class="fas fa-calendar-alt"></i> Selasa, 26 Agustus 2025 | 08.30-Selesai
+                </div>
+                <p class="activity-desc">
+                    Dalam rangka pengembangan koleksi fisik menjadi koleksi digital dan menambah koleksi buku menjadi lebih banyak lagi.
+                </p>
+                <a href="#" class="activity-btn">
+                    <i class="fas fa-arrow-right"></i> Info Lengkap
+                </a>
+            </div>
+        </div>
+        
+        
+        <div class="activity-item" onclick="openModal(https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg', 'workshop - Pworkshop literasi 2026', '9-10 Februari 2026 | 10:00 - 14:00 WIB', 'Poster kegiatan workshop 2026 bertema "workshop literasi)">
+            <img src="https://i.pinimg.com/736x/74/e6/a9/74e6a93a7d2bd32b5c611131e51f1fd7.jpg" 
+                 alt="workshop literasi" class="activity-image">
+            <div class="activity-content">
+                <div class="activity-icon">👥</div>
+                <div class="activity-title">workshop literasi</div>
+                <div class="activity-date">
+                    <i class="fas fa-calendar-alt"></i> 9-10 Februari 2026 | 10:00 - 14:00 WIB
+                </div>
+                <p class="activity-desc">
+                    Dalam rangka penjelasan materi mengenai literasi di perpustakaan yang di mana pemateri memberikan penjelasan bagaimana anggota perpustakaan harus literasi dalam kebutuhan pengguna".
+                </p>
+                <a href="#" class="activity-btn">
+                    <i class="fas fa-info-circle"></i> Info Lengkap
+                </a>
+            </div>
+        </div>
+        
+        
+        <div class="activity-item" onclick="openModal(https://i.pinimg.com/1200x/15/da/4c/15da4c9fe120269a5632098d6bd0e8f2.jpg, 'dies natalis perpustakaan', 'Senin, 30 Maret 2026 | 10:00 - 15:00 WIB', 'Foto dies natalis perpustakaan)">
+            <img src="https://i.pinimg.com/1200x/15/da/4c/15da4c9fe120269a5632098d6bd0e8f2.jpg" 
+                 alt="Simulasi Peradilan" class="activity-image">
+            <div class="activity-content">
+                <div class="activity-icon">⚖️</div>
+                <div class="activity-title">dies natalis perpustakaan</div>
+                <div class="activity-date">
+                    <i class="fas fa-calendar-alt"></i> Senin, 30 Maret 2026 | 10:00 - 15:00 WIB
+                </div>
+                <p class="activity-desc">
+                    Memeperingati hari terdirinya perpustakaan yang di mana hari tersebutlah berperosesnya perpustakaan menjadi sebaik mungkin 
+                </p>
+                <a href="#" class="activity-btn">
+                    <i class="fas fa-arrow-right"></i> Info Lengkap
+                </a>
+            </div>
+        </div>
+    </div>
+
+         <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2>Contact Pemilik</h2>
+        
+        <div class="contact-card">
+            <div class="contact-item">
+                <i class="fas fa-user"></i>
+                <strong>Panji Erlangga</strong>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <strong>panjierlangga202005@gmail.com</strong>
+            </div>
+            <div class="contact-item">
           { max-width: 400px; margin: 0 auto; }
         form { display: flex; flex-direction: column; width: 100%; }
         form label { margin-bottom: 5px; font-size: 0.9rem; color: #cbd5e1; }
