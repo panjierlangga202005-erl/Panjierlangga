@@ -812,8 +812,8 @@
         </div>
     </div>
 
-         <!-- CONTACT -->
-    <div id="contact" class="section">
+<!-- CONTACT -->
+<div id="contact" class="section">
         <h2>Contact Pemilik</h2>
         
         <div class="contact-card">
@@ -828,12 +828,12 @@
             <div class="contact-item">
                 <i class="fab fa-whatsapp"></i>
                 <strong>082267523213</strong>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <strong>Medan, Indonesia</strong>
-            </div>
         </div>
+        <div class="contact-item">
+             <i class="fas fa-map-marker-alt"></i>
+            <strong>Medan, Indonesia</strong>
+        </div>
+    </div>
 
         <h2>Kirim Pesan</h2>
         <div class="form-container">
@@ -888,30 +888,30 @@
 </div> 
 
 <script>
-function showMenu(menuId, clickedElement) {
+functionshowMenu(menuId, clickedElement) {
     document.querySelectorAll('.section').forEach(section => {
         section.classList.remove('active');
     });
-    const selectedSection = document.getElementById(menuId);
+    constselectedSection = document.getElementById(menuId);
     if (selectedSection) selectedSection.classList.add('active');
     
-    if(clickedElement && clickedElement.tagName === 'A') {
+    if (clickedElement && clickedElement.tagName === 'A') {
         document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
         clickedElement.classList.add('active');
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function searchBooks() {
-    let input = document.getElementById('searchInput').value.toLowerCase();
-    let li = document.getElementById('bookList').getElementsByTagName('li');
+functionsearchBooks() {
+    letinput = document.getElementById('searchInput').value.toLowerCase();
+    letli = document.getElementById('bookList').getElementsByTagName('li');
     for (let i = 0; i < li.length; i++) {
-        let textValue = li[i].textContent || li[i].innerText;
+        lettextValue = li[i].textContent || li[i].innerText;
         li[i].style.display = textValue.toLowerCase().indexOf(input) > -1 ? "" : "none";
     }
 }
 
-function openModal(imageSrc, title, date, description) {
+functionopenModal(imageSrc, title, date, description) {
     document.getElementById('modalImage').src = imageSrc;
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalDate').textContent = date;
@@ -921,13 +921,13 @@ function openModal(imageSrc, title, date, description) {
     document.body.style.overflow = 'hidden'; 
 }
 
-function closeModal() {
+functioncloseModal() {
     document.getElementById('eventModal').style.display = 'none';
     document.body.style.overflow = 'auto'; 
 }
 
 window.onclick = function(event) {
-    const modal = document.getElementById('eventModal');
+    constmodal = document.getElementById('eventModal');
     if (event.target === modal) 
         closeModal();
     
