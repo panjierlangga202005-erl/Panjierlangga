@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -812,26 +811,23 @@
         </div>
     </div>
 
-<!-- CONTACT -->
-<div id="contact" class="section">
-        <h2>Contact Pemilik</h2>
-        
-        <div class="contact-card">
-            <div class="contact-item">
-                <i class="fas fa-user"></i>
-                <strong>Panji Erlangga</strong>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <strong>panjierlangga202005@gmail.com</strong>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-whatsapp"></i>
-                <strong>082267523213</strong>
-        </div>
-        <div class="contact-item">
-             <i class="fas fa-map-marker-alt"></i>
-            <strong>Medan, Indonesia</strong>
+<!-- LOGIN -->
+    <div id="login" class="section">
+        <h2>Login Anggota</h2>
+        <div class="form-container">
+            <form onsubmit="event.preventDefault(); alert('Login berhasil! Selamat datang di Library Panji.'); showMenu('dashboard', document.querySelector('.nav-left a'));">
+                <label>Username</label>
+                <input type="text" placeholder="Masukkan username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Masukkan kata sandi" required>
+                <label>Status Pengguna</label>
+                <select required>
+                    <option value="">Pilih status</option>
+                    <option value="anggota">Anggota</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button type="submit">MASUK</button>
+            </form>
         </div>
     </div>
 
