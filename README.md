@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -192,6 +193,7 @@ function showMenu(menu){
     <a onclick="showMenu('dashboard')">Dashboard</a>
     <a onclick="showMenu('katalog')">Katalog</a>
     <a onclick="showMenu('kegiatan')">Literasi</a>
+    <a onclick="showMenu('event')">Event</a>
     <a onclick="showMenu('login')">Login</a>
     <a onclick="showMenu('daftar')">Daftar</a> <!-- Link Baru -->
     <a onclick="showMenu('contact')">Contact</a> <!-- Link Baru -->
@@ -206,7 +208,7 @@ function showMenu(menu){
 
     <div class="link-box">
         <a href="https://www.facebook.com/panji.erlangga.77" target="_blank">
-        Media Sosial
+        Look at Me
         </a>
         <a href="https://drive.google.com/drive/folders/1KyE7ubNtW2E0yUoDRS_2pGuJB3SHfi4f" target="_blank">
         Profile
@@ -249,6 +251,30 @@ function showMenu(menu){
     </ul>
 </div>
 
+<!-- EVENT -->
+<div id="event" class="section">
+    <h2>Event</h2>
+
+    <div class="card">
+        <h3>Galeri Event</h3>
+
+        <form>
+            <label>Sosialisasi</label>
+            <input type="text" id="Sosialisasi" placeholder="SosialisasiPemberdayaan UMKM Untuk Mengatasi Kemiskinan di Kota Medan Dinas Koperasi dan UMKM Prrov.Sumut" required>
+
+            <label>Upload Foto</label>
+            <input type="file" id="fotoEvent" accept="image/*" required>
+
+            <button type="button" class="button" onclick="uploadEvent()">Upload</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Galeri Event</h3>
+        <div id="galeriEvent"></div>
+    </div>
+</div>
+
 <!-- LOGIN -->
 <div id="login" class="section">
     <h2>Login Anggota</h2>
@@ -260,7 +286,7 @@ function showMenu(menu){
             <input type="password" required>
             <label>Status Pengguna</label>
             <input type="Status Pengguna" required>
-            <button type="Login">Masuk</button>
+            <button type="submit">Masuk</button>
         </form>
     </div>
 </div>
@@ -322,3 +348,4 @@ function showMenu(menu){
 
 </body>
 </html>
+
